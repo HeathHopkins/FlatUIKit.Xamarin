@@ -91,7 +91,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Theme.cs" />
     <Compile Include="ExtensionMethods.cs" />
     <Compile Include="Models\FUIButton.cs" />
     <Compile Include="Models\FlatUI.cs" />

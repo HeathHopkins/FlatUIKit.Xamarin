@@ -5,7 +5,7 @@ namespace FlatUIKit
 {
     public static partial class FlatUI
     {
-        public static class Colors
+        public static class Color
         {
             static Lazy<UIColor> turquoise = new Lazy<UIColor>(() => "1ABC9C".ToUIColor());
             public static UIColor Turquoise { get { return turquoise.Value; } }

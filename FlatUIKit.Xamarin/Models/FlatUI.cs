@@ -9,8 +9,21 @@ namespace FlatUIKit
     {
         public static void Apply()
         {
-            SetBarButtonItemAppearance(UIBarButtonItem.Appearance, FlatUI.Colors.PeterRiver, FlatUI.Colors.BelizeHole, UIColor.White, 3f);
-            SetFlatNavigationBarAppearance(UINavigationBar.Appearance, FlatUI.Colors.MidnightBlue);
+            SetBarButtonItemAppearance(UIBarButtonItem.Appearance, FlatUI.Color.PeterRiver, FlatUI.Color.BelizeHole, UIColor.White, 3f);
+            SetFlatNavigationBarAppearance(UINavigationBar.Appearance, FlatUI.Color.MidnightBlue);
+        }
+
+        const string FontName = @"HelveticaNeue-Medium";
+        const string BoldFontName = @"HelveticaNeue-Bold";
+
+        public static UIFont FontOfSize(float size)
+        {
+            return UIFont.FromName(FontName, size);
+        }
+
+        public static UIFont BoldFontOfSize(float size)
+        {
+            return UIFont.FromName(BoldFontName, size);
         }
 
         public static void SetFlatNavigationBarAppearance(UINavigationBar.UINavigationBarAppearance appearance, UIColor color)
@@ -28,16 +41,16 @@ namespace FlatUIKit
 
         public static void SetBarButtonItemAppearance(UIBarButtonItem.UIBarButtonItemAppearance appearance, UIColor color, UIColor highlightedColor, UIColor textColor, float cornerRadius)
         {
-            UIImage backButtonPortraitImage = FlatUI.BackButtonImageWithColor(color, 
+            UIImage backButtonPortraitImage = FlatUI.BackButtonImage(color, 
                                                                               UIBarMetrics.Default, 
                                                                               cornerRadius);
-            UIImage highlightedBackButtonPortraitImage = FlatUI.BackButtonImageWithColor(highlightedColor,
+            UIImage highlightedBackButtonPortraitImage = FlatUI.BackButtonImage(highlightedColor,
                                                                                          UIBarMetrics.Default,
                                                                                          cornerRadius);
-            UIImage backButtonLandscapeImage = FlatUI.BackButtonImageWithColor(color,
+            UIImage backButtonLandscapeImage = FlatUI.BackButtonImage(color,
                                                                                UIBarMetrics.LandscapePhone,
                                                                                2);
-            UIImage highlightedBackButtonLandscapeImage = FlatUI.BackButtonImageWithColor(highlightedColor,
+            UIImage highlightedBackButtonLandscapeImage = FlatUI.BackButtonImage(highlightedColor,
                                                                                           UIBarMetrics.LandscapePhone,
                                                                                           2);
 
@@ -69,10 +82,10 @@ namespace FlatUIKit
         {
             UIImage topImage = Image(color, cornerRadius);
             UIImage bottomImage = Image(shadowColor, cornerRadius);
-            float totalHeight = EdgeSizeFromCornerRadius(cornerRadius) + shadowInsets.Top + shadowInsets.Bottom;
-            float totalWidth = EdgeSizeFromCornerRadius(cornerRadius) + shadowInsets.Left + shadowInsets.Right;
-            float topWidth = EdgeSizeFromCornerRadius(cornerRadius);
-            float topHeight = EdgeSizeFromCornerRadius(cornerRadius);
+            float totalHeight = EdgeSize(cornerRadius) + shadowInsets.Top + shadowInsets.Bottom;
+            float totalWidth = EdgeSize(cornerRadius) + shadowInsets.Left + shadowInsets.Right;
+            float topWidth = EdgeSize(cornerRadius);
+            float topHeight = EdgeSize(cornerRadius);
             RectangleF topRect = new RectangleF(shadowInsets.Left, shadowInsets.Top, topWidth, topHeight);
             RectangleF bottomRect = new RectangleF(0, 0, totalWidth, totalHeight);
 
@@ -89,14 +102,14 @@ namespace FlatUIKit
             return buttonImage.CreateResizableImage(resizeableInsets);
         }
 
-        public static float EdgeSizeFromCornerRadius(float cornerRadius)
+        public static float EdgeSize(float cornerRadius)
         {
             return cornerRadius * 2 + 1;
         }
 
         public static UIImage Image(UIColor color, float cornerRadius)
         {
-            float minEdgeSize = EdgeSizeFromCornerRadius(cornerRadius);
+            float minEdgeSize = EdgeSize(cornerRadius);
             RectangleF rect = new RectangleF(0, 0, minEdgeSize, minEdgeSize);
             UIBezierPath roundedRect = UIBezierPath.FromRoundedRect(rect, cornerRadius);
             roundedRect.LineWidth = 0;
@@ -110,7 +123,7 @@ namespace FlatUIKit
             return image.CreateResizableImage(new UIEdgeInsets(cornerRadius, cornerRadius, cornerRadius, cornerRadius), UIImageResizingMode.Stretch);
         }
 
-        public static UIImage BackButtonImageWithColor(UIColor color, UIBarMetrics metrics, float cornerRadius)
+        public static UIImage BackButtonImage(UIColor color, UIBarMetrics metrics, float cornerRadius)
         {
             SizeF size;
             if (metrics.Equals(UIBarMetrics.Default))

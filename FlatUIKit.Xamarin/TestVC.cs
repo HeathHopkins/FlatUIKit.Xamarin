@@ -22,14 +22,14 @@ namespace FlatUIKit
         {
             var view = new UIView(UIScreen.MainScreen.ApplicationFrame)
             {
-                BackgroundColor = Theme.BackgroundColor,
+                BackgroundColor = FlatUI.Color.Clouds,
                 AutoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
             };
 
             bbi = new UIBarButtonItem("New", UIBarButtonItemStyle.Plain, HandleTouchUpInside);
             NavigationItem.RightBarButtonItem = bbi;
 
-            btn = new FUIButton(new RectangleF(50, 50, 200, 44), FlatUI.Colors.PeterRiver, FlatUI.Colors.BelizeHole);
+            btn = new FUIButton(new RectangleF(50, 50, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.BelizeHole);
 
             btn.SetTitle("Load New", UIControlState.Normal);
             view.Add(btn);
