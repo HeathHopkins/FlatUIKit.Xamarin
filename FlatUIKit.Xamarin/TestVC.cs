@@ -15,7 +15,7 @@ namespace FlatUIKit
             : base()
         {
             this.Id = Id;
-            Title = string.Format("Test Long Title {0}", Id);
+            Title = string.Format("Test {0}", Id);
         }
 
         public override void LoadView()
