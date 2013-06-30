@@ -16,6 +16,6 @@ Instructions:
 1. Set appearance changes in FlatUI.Apply() then call it in your AppDelegate.FinishedLaunching()
 2. FlatUI Colors are in FlatUI.Color
 3. Create Flat UIButtons with
-```csharp
+```
 new FUIButton(yourRectangle, FlatUI.Color.PeterRiver, FlatUI.Color.BelizeHole);
 ```
