@@ -29,7 +29,8 @@ namespace FlatUIKit
             bbi = new UIBarButtonItem("New", UIBarButtonItemStyle.Plain, HandleTouchUpInside);
             NavigationItem.RightBarButtonItem = bbi;
 
-            btn = new FUIButton(new RectangleF(50, 50, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.BelizeHole);
+            //btn = new FUIButton(new RectangleF(50, 50, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.BelizeHole);
+            btn = new FUIButton(new RectangleF(50, 50, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.PeterRiver.Darken(1));
 
             btn.SetTitle("Load New", UIControlState.Normal);
             view.Add(btn);
