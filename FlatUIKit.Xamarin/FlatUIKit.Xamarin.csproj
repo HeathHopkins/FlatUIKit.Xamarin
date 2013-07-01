@@ -92,10 +92,10 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="ExtensionMethods.cs" />
-    <Compile Include="Models\FUIButton.cs" />
     <Compile Include="Models\FlatUI.cs" />
     <Compile Include="TestVC.cs" />
     <Compile Include="Models\FlatUI+Colors.cs" />
+    <Compile Include="Models\FUIShadowedButton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
