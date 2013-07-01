@@ -9,7 +9,9 @@ namespace FlatUIKit
     {
         public static void Apply()
         {
+            // bar button items
             SetBarButtonItemAppearance(UIBarButtonItem.Appearance, FlatUI.Color.PeterRiver, FlatUI.Color.BelizeHole, UIColor.White, 3f);
+
             SetFlatNavigationBarAppearance(UINavigationBar.Appearance, FlatUI.Color.MidnightBlue);
         }
 
@@ -34,6 +36,7 @@ namespace FlatUIKit
                 titleTextAttributes = new UITextAttributes();
             titleTextAttributes.TextShadowColor = UIColor.Clear;
             titleTextAttributes.TextShadowOffset = new UIOffset(0, 0);
+            titleTextAttributes.Font = FlatUI.BoldFontOfSize(0);
             appearance.SetTitleTextAttributes(titleTextAttributes);
             if (appearance.RespondsToSelector(new MonoTouch.ObjCRuntime.Selector("setShadowImage:")))
                 appearance.ShadowImage = FlatUI.Image(UIColor.Clear, 0);
@@ -74,6 +77,7 @@ namespace FlatUIKit
             titleTextAttributes.TextShadowColor = UIColor.Clear;
             titleTextAttributes.TextShadowOffset = new UIOffset(0, 0);
             titleTextAttributes.TextColor = textColor;
+            titleTextAttributes.Font = FlatUI.FontOfSize(0);
             appearance.SetTitleTextAttributes(titleTextAttributes, UIControlState.Normal);
             appearance.SetTitleTextAttributes(titleTextAttributes, UIControlState.Highlighted);
         }
