@@ -106,11 +106,11 @@ namespace FlatUIKit
 
         private void ConfigureFlatButton()
         {
-            UIImage normalBackgroundImage = FlatUI.ButtonImageWithColor(ButtonColor, 
+            UIImage normalBackgroundImage = FlatUI.ButtonImage(ButtonColor, 
                                                                         CornerRadius, 
                                                                         ShadowColor, 
                                                                         new UIEdgeInsets(0, 0, ShadowHeight, 0));
-            UIImage highlightedBackgroundImage = FlatUI.ButtonImageWithColor(ButtonColor,
+            UIImage highlightedBackgroundImage = FlatUI.ButtonImage(ButtonColor,
                                                                              CornerRadius,
                                                                              UIColor.Clear,
                                                                              new UIEdgeInsets(ShadowHeight, 0, 0, 0));

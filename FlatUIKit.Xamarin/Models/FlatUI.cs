@@ -82,7 +82,7 @@ namespace FlatUIKit
             appearance.SetTitleTextAttributes(titleTextAttributes, UIControlState.Highlighted);
         }
 
-        public static UIImage ButtonImageWithColor(UIColor color, float cornerRadius, UIColor shadowColor, UIEdgeInsets shadowInsets)
+        public static UIImage ButtonImage(UIColor color, float cornerRadius, UIColor shadowColor, UIEdgeInsets shadowInsets)
         {
             UIImage topImage = Image(color, cornerRadius);
             UIImage bottomImage = Image(shadowColor, cornerRadius);
