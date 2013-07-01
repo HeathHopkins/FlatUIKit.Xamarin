@@ -5,12 +5,12 @@ using MonoTouch.Foundation;
 
 namespace FlatUIKit
 {
-    [Register("FUIButton")]
-    public class FUIButton : UIButton
+    [Register("FUIShadowedButton")]
+    public class FUIShadowedButton : UIButton
     {
         UIEdgeInsets DefaultEdgeInsets, NormalEdgeInsets, HighlightedEdgeInsets;
 
-        public FUIButton(RectangleF frame, UIColor buttonColor, UIColor shadowColor, float shadowHeight = 3f, float cornerRadius = 6f)
+        public FUIShadowedButton(RectangleF frame, UIColor buttonColor, UIColor shadowColor, float shadowHeight = 3f, float cornerRadius = 6f)
             : base(frame)
         {
 

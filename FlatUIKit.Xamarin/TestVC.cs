@@ -8,7 +8,7 @@ namespace FlatUIKit
     {
         public int Id { get; set; }
 
-        FUIButton btn;
+        FUIShadowedButton btn;
         UIBarButtonItem bbi;
 
         public TestVC(int Id)
@@ -30,7 +30,7 @@ namespace FlatUIKit
             NavigationItem.RightBarButtonItem = bbi;
 
             //btn = new FUIButton(new RectangleF(50, 50, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.BelizeHole);
-            btn = new FUIButton(new RectangleF(50, 50, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.PeterRiver.Darken(1));
+            btn = new FUIShadowedButton(new RectangleF(50, 50, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.PeterRiver.Darken(1));
 
             btn.SetTitle("Load New", UIControlState.Normal);
             view.Add(btn);
