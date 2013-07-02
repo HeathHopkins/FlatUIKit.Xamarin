@@ -10,12 +10,12 @@ namespace FlatUIKit
     {
         //UIEdgeInsets DefaultEdgeInsets, NormalEdgeInsets, HighlightedEdgeInsets;
 
-        public FUIButton(RectangleF frame, UIColor buttonColor, UIColor highlightedColor, float borderWidth = 3f, float cornerRadius = 6f)
+        public FUIButton(RectangleF frame, UIColor buttonColor, UIColor highlightedColor, float borderWidth = 1f, float cornerRadius = 5f)
             : this(frame, buttonColor, highlightedColor, buttonColor.Darken(2), highlightedColor.Darken(2), borderWidth, cornerRadius)
         {
         }
 
-        public FUIButton(RectangleF frame, UIColor buttonColor, UIColor highlightedColor, UIColor borderColor, UIColor highlightedBorderColor, float borderWidth = 3f, float cornerRadius = 6f)
+        public FUIButton(RectangleF frame, UIColor buttonColor, UIColor highlightedColor, UIColor borderColor, UIColor highlightedBorderColor, float borderWidth = 1f, float cornerRadius = 5f)
             : base(frame)
         {
             _ButtonColor = buttonColor;

@@ -30,11 +30,15 @@ namespace FlatUIKit
             bbi = new UIBarButtonItem("New", UIBarButtonItemStyle.Plain, HandleTouchUpInside);
             NavigationItem.RightBarButtonItem = bbi;
 
-            btnShadowed = new FUIShadowedButton(new RectangleF(50, 50, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.PeterRiver.Darken(1));
+            btnShadowed = new FUIShadowedButton(new RectangleF(50, 50, 320 - 100, 44), FlatUI.Color.PeterRiver, FlatUI.Color.PeterRiver.Darken(1));
             btnShadowed.SetTitle("Shadowed", UIControlState.Normal);
             view.Add(btnShadowed);
 
-            btnFlat = new FUIButton(new RectangleF(50, 120, 200, 44), FlatUI.Color.PeterRiver, FlatUI.Color.PeterRiver.Darken(1));
+            btnFlat = new FUIButton(new RectangleF(50, 120, 320 - 100, 44), FlatUI.Color.PeterRiver, FlatUI.Color.PeterRiver.Darken(1))
+            {
+                AutoresizingMask = UIViewAutoresizing.FlexibleWidth,
+                Font = FlatUI.BoldFontOfSize(19)
+            };
             btnFlat.SetTitle("Flat", UIControlState.Normal);
             view.Add(btnFlat);
 
