@@ -96,6 +96,7 @@
     <Compile Include="TestVC.cs" />
     <Compile Include="Models\FlatUI+Colors.cs" />
     <Compile Include="Models\FUIShadowedButton.cs" />
+    <Compile Include="Models\FUIButton.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
